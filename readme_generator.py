@@ -17,14 +17,18 @@ def find_siblings_with_dist_index(directory='.'):
 def generate_readme(directory='.'):
     # Get sibling folders with 'dist' and 'index.html'
     filtered_folders = find_siblings_with_dist_index(directory)
+    # print(filtered_folders)
 
     # Create README content with folder names and links to 'dist' in a table
     readme_content = "# Sibling Folders with dist/index.html\n\n"
-    readme_content += "| Folder Name | dist Link |\n"
+    readme_content += "| Repo | Live preview |\n"
     readme_content += "|-------------|-----------|\n"
     for folder in filtered_folders:
-        dist_link = f"[dist]({os.path.join(folder, 'dist')})"
-        readme_content += f"| {folder} | {dist_link} |\n"
+        # dist_link = f"[Live Preview ]({os.path.join(folder, 'dist')})"
+        dist_link = f"[Live Preview ](https://sharif-22.github.io/cyberdude-challenges/javascript/02-javascript-dom/{folder}/dist)"
+# https://sharif-22.github.io/cyberdude-challenges/javascript/02-javascript-dom/11-split-calculator-app/dist/
+        repoLink = f"https://github.com/sharif-22/cyberdude-challenges/tree/main/javascript/02-javascript-dom/{folder}"
+        readme_content += f"| [{folder}]({repoLink}) | {dist_link} |\n"
 
     # Write content to README.md
     with open(os.path.join(directory, "README.md"), "w") as readme_file:
