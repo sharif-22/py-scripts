@@ -4,6 +4,6 @@
 
 ### Currently we have
 
-| 🐍Script🐍       | 📜description📜                                                       |
-| ---------------- | --------------------------------------------------------------------- |
-| README Generator | Generate a README file with an organized repository folder structure. |
+| 🐍Script🐍                                | 📜description📜                                                       |
+| ----------------------------------------- | --------------------------------------------------------------------- |
+| [README Generator](./readme_generator.py) | Generate a README file with an organized repository folder structure. |
